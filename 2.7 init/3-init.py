@@ -2,14 +2,19 @@
 Предыстория:
 
 У Васи день рождения, и три друга (Masha, Nikita, Lena) придут с подарком. Вася любит красный цвет.
-
-Masha - подарит красную ручку ("pen", "red")
-Nikita - подарит красную футболку ("t-shirt", "red")
-Lena - подарит красный мяч ("ball", "red")
-Задача:
-
-Создайте класс BirthDay и объявите метод __init__. В параметрах __init__ укажите (self, present, color).
-Метод __init__ создаёт два атрибута present и color, и присваивает им значения параметров present, color соответственно. Объявите в методе создание этих атрибутов.
-Создайте три экземпляра masha, nikita, lena и создайте у них атрибуты present, color соответственно тем подаркам, которые они подарят. Например masha подарит, present = "pen", color = "red".
-Выведите на экран значения атрибутов у каждого экземпляра, согласно примеру ниже.
+Маша подарила: pen, цвета: red
+Никита подарил: t-shirt, цвета: red
+Лена подарила: ball, цвета: red
 """
+class BirthDay:
+    def __init__(self, present, color='red'):
+        self.present = present
+        self.color = color
+
+masha = BirthDay('pen')
+nikita = BirthDay('t-shirt')
+lena = BirthDay('ball')
+
+print(f'Маша подарила: {masha.present}, цвета: {masha.color}')
+print(f'Никита подарил: {nikita.present}, цвета: {nikita.color}')
+print(f'Лена подарила: {lena.present}, цвета: {lena.color}')
