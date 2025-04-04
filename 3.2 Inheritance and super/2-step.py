@@ -11,3 +11,15 @@
 4) Создайте экземпляр test класса Beta
 5) Вызовите метод result через экземпляр test, используя аргументы 10, 20, 30. Функцию print() использовать не нужно.
 """
+class Alfa:
+    @staticmethod
+    def sum_number(x, y):
+        return x + y
+    
+class Beta(Alfa):
+    def result(self, x, y, z):
+        summa = super().sum_number(x, y)
+        print(summa / z)
+
+test = Beta()
+test.result(10, 20, 30)

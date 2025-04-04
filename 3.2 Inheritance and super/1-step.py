@@ -7,5 +7,17 @@
     Метод hello_all также будет выводить на экран фразу "Hello, Pozzy!" с помощью print.
 Создайте экземпляр hello класса Roblox.
 Вызовите метод hello_all, через экземпляр hello. Функцию print не нужно использовать.
-В итоге, программа будет выводить на экран две фразы, как указано в примере ниже. 
 """
+
+class Minecraft:
+    def hello_creeper(self):
+        print("Hello, Creeper!")
+
+
+class Roblox(Minecraft):
+    def hello_all(self):
+        super().hello_creeper()
+        print("Hello, Pozzy!")
+
+hello = Roblox()
+hello.hello_all()
