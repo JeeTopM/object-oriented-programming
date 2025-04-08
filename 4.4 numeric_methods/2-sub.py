@@ -10,3 +10,14 @@
 Sample Output:
 50
 """
+class Number:
+    def __init__(self, number):
+        self.number = number
+    def __sub__(self, other):
+        if isinstance(other, Number):
+            return self.number - other.number
+
+num1 = Number(70)
+num2 = Number(20)
+
+print(num1-num2)
