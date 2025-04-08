@@ -9,6 +9,11 @@ class Lists:
         self.lists = lists
 
     # ваш метод(ы)
+    def __lt__(self, other):
+        return len(self.lists) < len(other.lists)
+    def __qt__(self, other):
+        return len(self.lists) > len(other.lists)
+    
 
 # код ниже не меняйте, во имя вселенной
 lst1 = Lists(["a", "b", "c"])

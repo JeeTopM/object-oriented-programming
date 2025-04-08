@@ -10,6 +10,10 @@ class Books:
         self.book_page = book_page
 
     # ваш код для __le__ и __ge__
+    def __ge__(self, other):
+        return self.book_page <= other.book_page
+    def __le__(self, other):
+        return self.book_page >= other.book_page
 
 
 # код ниже не меняйте, ради вселенной 

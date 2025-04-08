@@ -13,7 +13,12 @@ class Number:
         self.summa = x + y
 
     # объявите метод __eq__
-
+    def __eq__(self, other):
+        if isinstance(other, Number):
+            return self.summa == other.summa
+        elif isinstance(other, int):
+            return self.summa == other
+        
 
 # код ниже пожалуйста не удаляйте
 number_1 = Number(4, 2)
