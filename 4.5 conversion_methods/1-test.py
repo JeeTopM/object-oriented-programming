@@ -11,7 +11,7 @@ class Person:
         self.name = name
 
     def __str__(self):
-        # напишите ваш код
+        return f"Да здравствует {self.name}!"
 
 # Код ниже пожалуйста не меняйте:        
 input_word = input()
