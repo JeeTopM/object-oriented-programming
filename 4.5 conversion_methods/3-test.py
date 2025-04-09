@@ -11,7 +11,8 @@ class Car:
         self.color = color
 
     # ваш код:
-
+    def __hash__(self):
+        return hash((self.model, self.color))
 
 # код ниже не меняйте, ради вселенной
 car1 = Car("toyota corolla", "black")
