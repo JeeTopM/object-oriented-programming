@@ -5,6 +5,8 @@ class Hello:
         self.say = say
 
     # Ваш код
-
+    def __mul__(self, other):
+        return self.say * other
+    
 lang = Hello('Hello!')
 print(lang * 3)  # Hello!Hello!Hello!

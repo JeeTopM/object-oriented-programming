@@ -10,3 +10,12 @@
 Sample Output:
 100
 """
+class Number:
+    def __init__(self, number):
+        self.number = number
+    def __pow__(self, power):
+        if isinstance(self.number, int):
+            return self.number ** power
+
+num = Number(10)
+print(num**2)

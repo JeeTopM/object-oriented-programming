@@ -13,3 +13,15 @@ Sample Output:
 5.0
 на ноль делить нельзя
 """
+class Number:
+    def __init__(self, number):
+        self.number = number
+
+    def __truediv__(self, other):
+        if other != 0:
+            return self.number / other
+        else:
+            return "на ноль делить нельзя"
+
+num = Number(10)
+print(num / 2, num / 0, sep='\n')

@@ -2,7 +2,21 @@
 
 class Number:
     # Объявите здесь все необходимые методы для операций
-    pass
+    def __init__(self, number):
+        self.number = number
+    def __add__(self, other):
+        return self.number + other
+    def __truediv__(self, other):
+        return self.number / other
+    def __mul__(self, other):
+        return self.number * other
+    def __pow__(self, power):
+        return self.number ** power
+    def __sub__(self, other):
+        return self.number - other
+    def __abs__(self):
+        return abs(self.number)
+
 
 # код ниже не меняйте ради вселенной
 num1 = Number(-10)
