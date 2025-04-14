@@ -27,6 +27,15 @@ class MyList:
         self.index = 0
 
     # объявите методы __iter__ и __next__
+    def __iter__(self):
+        print("Запустился __iter__")
+        return self
+    def __next__(self):
+        print("Запустился __next__")
+        if self.index >= len(self.data):
+            raise StopIteration
+        else:
+            self.index += 1
 
 # код ниже пожалуйста не меняйте
 my_list = MyList()

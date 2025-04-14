@@ -12,9 +12,16 @@ class Present:
         self.present = ['book', 'Iphone', 'TV', 'snowman', 'car']
 
     # ваши методы
+    def __delitem__(self, index):    
+        del self.present[index]
+    def __getitem__(self, item):
+        return self.present[item]
+    def __len__(self):
+        return len(self.present)
 
 holiday = Present()
 # ваш код, если потребуется
+del holiday[4]
 
 # код ниже не удаляйте, ради Маши!
 if len(holiday) == 4:

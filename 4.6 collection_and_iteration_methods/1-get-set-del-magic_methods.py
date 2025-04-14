@@ -16,7 +16,20 @@ class MyPhone:
         return str(self.phone)
 
     # напишите ваши методы
+    def __getitem__(self, item):
+        return self.phone[item]
 
+    def __setitem__(self, index, value):
+        self.phone[index] = value
+    
+    def __delitem__(self, index):    
+        del self.phone[index]
+
+    def kruchu_verchu(self, value):
+        self.phone.append(value)
+
+    def __str__(self):
+        return str(self.phone)
 
 # код ниже не меняйте, но присмотритесь
 my_phone = MyPhone()
