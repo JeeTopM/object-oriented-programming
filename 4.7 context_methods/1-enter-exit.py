@@ -21,14 +21,14 @@ planetes = ['Сатурн', 'Юпитер', 'Земля', 'Марс']
 
 class StarTravel:
     def __init__(self, other):
-        # допишите код
+        self.other = other
         
-
     def __enter__(self):
-        # допишите код
+        planetes.append(self.other)
+        return planetes
 
     def __exit__(self, exc_type, exc_value, traceback):
-        # допишите код
+        print('Венера')
 
 
 # код ниже пожалуйста не меняйте  
