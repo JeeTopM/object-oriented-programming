@@ -19,8 +19,23 @@ Sample Output:
 Результат: Индюк на три дня
 """
 # Создайте класс и методы
+class BeautyTransform:
+    def __init__(self, height, weight):
+        self.height = height
+        self.weight = weight
+        self.result = "Божественная красота"
 
-
+    def transformer(self):
+        try:
+            self.new_body = self.height / self.weight
+        except Exception:
+            self.result = "Индюк на три дня"
+        else:
+            print('Проверка прошла!', end=' ')
+        finally:
+            print(f'Результат: {self.result}')
+        
+    
 # Код ниже пожалуйста не меняйте, ради Васи
 nastya = BeautyTransform(100, 50)
 lena = BeautyTransform(50, 90)

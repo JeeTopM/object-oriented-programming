@@ -17,8 +17,17 @@ Sample Output:
 Лицо как в картине Крик, Эдварда Мунка
 """
 # Создайте класс и методы
-
-
+class BeautyTransform:
+    def __init__(self,height, weight=0):
+        self.height = height
+        self.weight = weight
+    
+    def transformer(self):
+        try:
+            self.new_body = self.height / self.weight
+            print('Успешная трансформация')
+        except ZeroDivisionError:
+            print('Лицо как в картине Крик, Эдварда Мунка')
 
 # Код ниже пожалуйста не меняйте
 vasya = BeautyTransform(172, 70)
